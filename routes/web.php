@@ -17,13 +17,20 @@ Route::get('/', [\App\Http\Controllers\PrincipalController::class, 'principal'])
 Route::get('/contato', [\App\Http\Controllers\ContatoController::class, 'contato']);
 Route::get('/sobre-nos', [\App\Http\Controllers\SobreNosController::class, 'sobre']);
 
-Route::get(
-    '/contato/{name?}/{category_id?}',
-    function (
-        string $name = "Desconhecido",
-        int    $category = 1
-    ) {
-        echo 'Seu nome: ' . $name . ' - ' . $category;
-    })
-    ->where('category_id', '[0-9]+')
-    ->where('name', '[A-Za-z]+');
+
+Route::get('/login', function () {
+    return 'Login';
+});
+Route::get('/clientes', function () {
+    return 'Clientes';
+});
+Route::get('/fornecedores', function () {
+    return 'Fornecedores';
+});
+Route::get('/produtos', function () {
+    return 'Produtos';
+});
+
+
+
+
