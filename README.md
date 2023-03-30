@@ -1,27 +1,12 @@
 
 # Setup Docker Para Projetos Laravel 10
-[Assine a Academy, e Seja VIP!](https://academy.especializati.com.br)
+
 
 ### Passo a passo
 Clone Repositório
 ```sh
-git clone https://github.com/especializati/setup-docker-laravel.git
+https://github.com/Roliveira96/laravel.git
 ```
-
-Clone os Arquivos do Laravel
-```sh
-git clone https://github.com/laravel/laravel.git app-laravel
-```
-
-
-Copie os arquivos docker-compose.yml, Dockerfile e o diretório docker/ para o seu projeto
-```sh
-cp -rf setup-docker-laravel/* app-laravel/
-```
-```sh
-cd app-laravel/
-```
-
 
 Crie o Arquivo .env
 ```sh
@@ -76,4 +61,4 @@ php artisan key:generate
 
 
 Acessar o projeto
-[http://localhost:8989](http://localhost:8989)
+[http://localhost](http://localhost)
