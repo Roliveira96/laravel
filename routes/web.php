@@ -13,13 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return "Olá ";
-});
-Route::get('/sobre-nos', function () {
-    return "Sobre nós ";
-});
-Route::get('/contato', function () {
-    return "Contato ";
-});
+Route::get('/', [\App\Http\Controllers\PrincipalController::class, 'principal']);
+Route::get('/contato', [\App\Http\Controllers\ContatoController::class, 'contato']);
+Route::get('/sobre-nos', [\App\Http\Controllers\SobreNosController::class, 'sobre']);
+
+Route::get(
+    '/contato/{name?}/{category_id?}',
+    function (
+        string $name = "Desconhecido",
+        int    $category = 1
+    ) {
+        echo 'Seu nome: ' . $name . ' - ' . $category;
+    })
+    ->where('category_id', '[0-9]+')
+    ->where('name', '[A-Za-z]+');
 
