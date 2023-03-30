@@ -13,10 +13,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\PrincipalController::class,'principal']);
-Route::get('/contato', [\App\Http\Controllers\ContatoController::class,'contato']);
-Route::get('/sobre-nos', [\App\Http\Controllers\SobreNosController::class,'sobre']);
+Route::get('/', [\App\Http\Controllers\PrincipalController::class, 'principal'])->name('site.index');
+Route::get('/contato', [\App\Http\Controllers\ContatoController::class, 'contato'])->name('site.contato');
+Route::get('/sobre-nos', [\App\Http\Controllers\SobreNosController::class, 'sobre'])->name('site.sobrenos');
 
-Route::get('/contato/{name}/{category}/{subjet}/{message?}', function (string $name, string $category, string $subject, string $message = "teste"){
-    echo  'Seu nome: '. $name. ' - ' . $category. ' - '. $subject. ' - '. $message;
+Route::get('/login', function () {
+    return 'Login';
+})->name('site.login');
+
+
+Route::prefix('/app')->group(function () {
+
+    Route::get('/clientes', function () {
+        return 'Clientes';
+    })->name('app.clientes');
+    Route::get('/fornecedores', function () {
+        return 'Fornecedores';
+    })->name('app.fornecedores');
+    Route::get('/produtos', function () {
+        return 'Produtos';
+    })->name('app.produtos');
 });
+
+Route::get('/rota1', function (){
+    echo 'rota 1';
+})->name('site.rota1');
+
+Route::get('/rota2', function (){
+    return redirect()->route('site.rota1');
+})->name('site.rota2');
+
+
+
+
