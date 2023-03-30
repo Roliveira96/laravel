@@ -27,4 +27,3 @@ Route::get(
     })
     ->where('category_id', '[0-9]+')
     ->where('name', '[A-Za-z]+');
-
