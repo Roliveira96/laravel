@@ -1,11 +1,14 @@
 
+
 # Setup Docker Para Projetos Laravel 10
 
 
-### Passo a passo
+### Passo a passo da instalação
 Clone Repositório
 ```sh
+
 https://github.com/Roliveira96/laravel.git
+
 ```
 
 Crie o Arquivo .env
@@ -17,7 +20,7 @@ cp .env.example .env
 Atualize as variáveis de ambiente do arquivo .env
 ```dosini
 APP_NAME="Especializa Ti"
-APP_URL=http://localhost:8989
+APP_URL=http://localhost:80
 
 DB_CONNECTION=mysql
 DB_HOST=db
@@ -61,4 +64,6 @@ php artisan key:generate
 
 
 Acessar o projeto
+
 [http://localhost](http://localhost)
+
