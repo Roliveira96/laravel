@@ -5,21 +5,28 @@
 @endphp
 
 
-    @forelse($fornecedores as $key=> $fornecedor)
-        Fornecedor: {{ $fornecedor['nome'] }}
-        <br>
-        Status: {{ $fornecedor['status'] }}
-        <br>
-        CNPj: {{ $fornecedor['cnpj'] ?? 'Dado não foi preenchido' }}
-        <br>
-        Telefone: {{ $fornecedor['ddd'] ?? '' }}  {{ $fornecedor['telefone'] ?? '' }}
-        <br>
-        <hr>
+@forelse($fornecedores as $key=> $fornecedor)
 
-    @empty
-        Não exitem fornecedore cadastrad
+    Interação: {{ $loop->iteration }}<br>
+    Firt: {{ $loop->first }}<br>
+    Last {{ $loop->last }}<br>
+    Count {{ $loop->count }}<br>
+    @dd($loop) --> Caso tenha interesse de saber o que está dentro do objeto loop
 
-    @endforelse
+    Fornecedor: {{ $fornecedor['nome'] }}
+    <br>
+    Status: {{ $fornecedor['status'] }}
+    <br>
+    CNPj: {{ $fornecedor['cnpj'] ?? 'Dado não foi preenchido' }}
+    <br>
+    Telefone: {{ $fornecedor['ddd'] ?? '' }}  {{ $fornecedor['telefone'] ?? '' }}
+    <br>
+    <hr>
+
+@empty
+    Não exitem fornecedore cadastrad
+
+@endforelse
 
 <br>
 
