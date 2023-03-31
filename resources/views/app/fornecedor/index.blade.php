@@ -6,21 +6,17 @@
 
 @isset($fornecedores)
 
- @while( isset($fornecedores[$i] ))
-
-        Fornecedor: {{ $fornecedores[$i]['nome'] }}
+ @foreach($fornecedores as $key=> $fornecedor)
+        Fornecedor: {{ $fornecedor['nome'] }}
         <br>
-        Status: {{ $fornecedores[$i]['status'] }}
+        Status: {{ $fornecedor['status'] }}
         <br>
-        CNPj: {{ $fornecedores[$i]['cnpj'] ?? 'Dado não foi preenchido' }}
+        CNPj: {{ $fornecedor['cnpj'] ?? 'Dado não foi preenchido' }}
         <br>
-        Telefone: {{ $fornecedores[$i]['ddd'] ?? '' }}  {{ $fornecedores[$i]['telefone'] ?? '' }}
+        Telefone: {{ $fornecedor['ddd'] ?? '' }}  {{ $fornecedor['telefone'] ?? '' }}
         <br>
         <hr>
-        @php
-            $i++
-        @endphp
- @endwhile
+ @endforeach
 @endisset
 
 <br>
