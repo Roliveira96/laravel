@@ -6,11 +6,11 @@
 @endphp
 
 
+Fornecedor: {{ $fornecedores[0]['nome'] }}
+<br>
+Status: {{ $fornecedores[0]['status'] }}
 
-@if( count($fornecedores)> 0 && count($fornecedores) < 10)
-    <h4>Existem fornecedores</h4>
-@elseif(count($fornecedores)> 10)
-    <h4>Existem vários fornecedores</h4>
-@else
-    <h4>Não exitem fornecedores</h4>
+@if($fornecedores[0]['status'] == 'n' )
+    <p><b>Fornecedor Inativo</b></p>
+
 @endif
