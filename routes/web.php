@@ -43,6 +43,8 @@ Route::get('/rota2', function (){
     return redirect()->route('site.rota1');
 })->name('site.rota2');
 
-
+Route::fallback(function (){
+   echo 'A rota acessada não existe <a href="'.\route('site.index').'">Clique aqui para voltar ao inicio do site!</a>';
+});
 
 
