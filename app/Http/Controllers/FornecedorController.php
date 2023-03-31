@@ -13,6 +13,9 @@ class FornecedorController extends Controller
             1 => ['nome' => 'fornecedor 1', 'status' => 'n']
         ];
 
+        $meg = isset($fornecedores[0]['cnpj'])? 'CNPJ informado' : 'CNPJ não informado';
+
+        echo $meg;
         return view('app.fornecedor.index', compact('fornecedores'));
     }
 }
