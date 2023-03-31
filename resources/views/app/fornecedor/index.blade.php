@@ -8,9 +8,6 @@
     <br>
     Status: {{ $fornecedores[0]['status'] }}
     <br>
-    CNPj: {{ $fornecedores[0]['cnpj'] }}
-    @empty($fornecedores[0]['cnpj'])
-        <h4>O CNPJ está vazio</h4>
-    @endempty
+    CNPj: {{ $fornecedores[0]['cnpj'] ?? 'Dado não foi preenchido' }}
 
 @endisset
