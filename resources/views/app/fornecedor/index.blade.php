@@ -9,18 +9,8 @@
     Status: {{ $fornecedores[0]['status'] }}
     <br>
     CNPj: {{ $fornecedores[0]['cnpj'] }}
-
-@endisset
-<br>
-<br>
-@isset($fornecedores)
-
-    Fornecedor: {{ $fornecedores[1]['nome'] }}
-    <br>
-    Status: {{ $fornecedores[1]['status'] }}
-    <br>
-    @isset($fornecedores[1]['cnpj'])
-        CNPj: {{ $fornecedores[1]['cnpj'] }}
-    @endisset
+    @empty($fornecedores[0]['cnpj'])
+        <h4>O CNPJ está vazio</h4>
+    @endempty
 
 @endisset
