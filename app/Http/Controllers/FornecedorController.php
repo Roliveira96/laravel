@@ -8,6 +8,12 @@ class FornecedorController extends Controller
 {
     function index()
     {
-        return view('app.fornecedor.index');
+
+        $fornecedores = [
+            'fornecedor 1',
+            'fornecedor 1'];
+
+
+        return view('app.fornecedor.index', compact('fornecedores'));
     }
 }
