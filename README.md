@@ -1,10 +1,14 @@
 
-# Projetos em Laravel 10
+
+# Setup Docker Para Projetos Laravel 10
+
 
 ### Passo a passo da instalação
 Clone Repositório
 ```sh
-git clone https://github.com/especializati/setup-docker-laravel.git
+
+https://github.com/Roliveira96/laravel.git
+
 ```
 
 Crie o Arquivo .env
@@ -60,4 +64,6 @@ php artisan key:generate
 
 
 Acessar o projeto
-[http://localhost:80](http://localhost:80)
+
+[http://localhost](http://localhost)
+
