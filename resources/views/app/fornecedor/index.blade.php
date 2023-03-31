@@ -4,9 +4,8 @@
     $i = 0
 @endphp
 
-@isset($fornecedores)
 
- @foreach($fornecedores as $key=> $fornecedor)
+    @forelse($fornecedores as $key=> $fornecedor)
         Fornecedor: {{ $fornecedor['nome'] }}
         <br>
         Status: {{ $fornecedor['status'] }}
@@ -16,8 +15,11 @@
         Telefone: {{ $fornecedor['ddd'] ?? '' }}  {{ $fornecedor['telefone'] ?? '' }}
         <br>
         <hr>
- @endforeach
-@endisset
+
+    @empty
+        Não exitem fornecedore cadastrad
+
+    @endforelse
 
 <br>
 
