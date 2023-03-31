@@ -3,7 +3,7 @@
 @php
 
 
-@endphp
+    @endphp
 
 
 Fornecedor: {{ $fornecedores[0]['nome'] }}
@@ -14,3 +14,7 @@ Status: {{ $fornecedores[0]['status'] }}
     <p><b>Fornecedor Inativo</b></p>
 
 @endif
+
+@unless($fornecedores[0]['status'] == 'n')
+    <p><b>Fornecedor Ativo</b></p>
+@endunless
