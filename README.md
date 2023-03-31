@@ -1,8 +1,7 @@
 
 # Projetos em Laravel 10
-[Assine a Academy, e Seja VIP!](https://academy.especializati.com.br)
 
-### Passo a passo instalação
+### Passo a passo da instalação
 Clone Repositório
 ```sh
 git clone https://github.com/especializati/setup-docker-laravel.git
@@ -17,7 +16,7 @@ cp .env.example .env
 Atualize as variáveis de ambiente do arquivo .env
 ```dosini
 APP_NAME="Especializa Ti"
-APP_URL=http://localhost:8989
+APP_URL=http://localhost:80
 
 DB_CONNECTION=mysql
 DB_HOST=db
