@@ -9,9 +9,10 @@ class FornecedorController extends Controller
     function index()
     {
         $fornecedores = [
-            0 => ['nome' => 'fornecedor 1', 'status' => 'n']
+            0 => ['nome' => 'fornecedor 1', 'status' => 'n','cnpj'=>'00.000.000/0000-00'],
+            1 => ['nome' => 'fornecedor 1', 'status' => 'n']
         ];
 
-        return view('app.fornecedor.index');
+        return view('app.fornecedor.index', compact('fornecedores'));
     }
 }
