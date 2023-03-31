@@ -1,9 +1,13 @@
 <h3>Fornecedor</h3>
 
-
+@php
+    $i = 0
+@endphp
 
 @isset($fornecedores)
-    @for($i = 0 ; isset($fornecedores[$i]); $i++)
+
+ @while( isset($fornecedores[$i] ))
+
         Fornecedor: {{ $fornecedores[$i]['nome'] }}
         <br>
         Status: {{ $fornecedores[$i]['status'] }}
@@ -13,7 +17,10 @@
         Telefone: {{ $fornecedores[$i]['ddd'] ?? '' }}  {{ $fornecedores[$i]['telefone'] ?? '' }}
         <br>
         <hr>
-    @endfor
+        @php
+            $i++
+        @endphp
+ @endwhile
 @endisset
 
 <br>
