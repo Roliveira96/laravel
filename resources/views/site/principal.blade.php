@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title>Super Gestão - Sobre Nós</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+@extends('site.layouts.basic')
 
-    </head>
-
-    <body>
+@section('conteudo')
         <div class="topo">
 
             <div class="logo">
@@ -30,7 +23,7 @@
                     <h1>Sistema Super Gestão</h1>
                     <p>Software para gestão empresarial ideal para sua empresa.<p>
                     <div class="chamada">
-                        <img src="/{{ asset('img/check.png') }}">
+                        <img src="{{ asset('img/check.png') }}">
                         <span class="texto-branco">Gestão completa e descomplicada</span>
                     </div>
                     <div class="chamada">
@@ -69,5 +62,4 @@
                 </div>
             </div>
         </div>
-    </body>
-</html>
+@endsection
